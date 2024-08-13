@@ -15,7 +15,9 @@ public submis: Array<{Title:string, Description: string}> =[];
 constructor() {}
 ValidRequirement(){
   this.Sub= this.Title.length>=3 && this.Description.length >=10;
-  this.Done= this.Sub;
 }
 
+list(){
+
+}
 }
