@@ -16,8 +16,4 @@ constructor() {}
 ValidRequirement(){
   this.Sub= this.Title.length>=3 && this.Description.length >=10;
 }
-
-list(){
-
-}
 }
