@@ -7,7 +7,6 @@
 </ion-header>
 
 
-    <ion-list>
       <ion-list>
         <ion-grid>
           <ion-row>
@@ -32,13 +31,27 @@
       <form>
         <ion-grid>
           <ion-row>
-            <ion-col> <ion-button type="submit" color="success" [disabled]="!Sub" function="Submis()">Submit</ion-button>
+            <ion-col> <ion-button type="submit" color="primary" [disabled]="!Sub" 
+              (click)="addlist()"function="Submis()">Submit</ion-button>
             </ion-col> 
           </ion-row>            
         </ion-grid> 
       </form>
       </ion-list>
+
+    <ion-list *ngIf="list.length > 0; else noList">
+      <ion-item *ngFor="let list of list">
+        <ion-label>
+          <h1>{{list.Title}}</h1>
+          <p>{{list.Description }}</p>
+        </ion-label>
+      </ion-item>
     </ion-list>
+
+    <ng-template #noList>
+      <p>There is nothing added</p>
+    </ng-template>
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
