@@ -41,6 +41,7 @@
 
     <ion-list *ngIf="list.length > 0; else noList">
       <ion-item *ngFor="let list of list">
+        <ion-checkbox (ionChange)="onCheckboxChange($event)"></ion-checkbox>
         <ion-label>
           <h1>{{list.Title}}</h1>
           <p>{{list.Description }}</p>
