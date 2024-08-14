@@ -23,7 +23,7 @@ onCheckboxChange(event: any) {
 
 async presentAlert() {
   const alert = await this.alertController.create({
-    header: 'Good jobs',
+    header: 'Good job',
     message: 'Your tasks was finished',
     buttons: [
       {
